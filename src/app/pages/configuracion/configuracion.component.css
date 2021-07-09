@@ -1,0 +1,19 @@
+.border {
+  border: 1px solid grey;
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+}
+
+#configuracion {
+  height: 200px;
+  flex-grow: 1;
+}
+
+#tabla {
+  height: 200px;
+  flex-grow: 8;
+}
+

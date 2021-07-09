@@ -1,0 +1,13 @@
+<kendo-grid [data]="gridItems | async"
+            [sortable]="true" [sort]="sortDescriptor" (sortChange)="handleSortChange($event)"
+            [height]="400">
+  <kendo-grid-column field="column_one" title="Columna 1" width="200">
+  </kendo-grid-column>
+  <kendo-grid-column field="column_two" title="Columna 2" width="200">
+  </kendo-grid-column>
+  <kendo-grid-column field="actions" title="Acciones" width="140" filter="boolean">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+    </ng-template>
+  </kendo-grid-column>
+</kendo-grid>

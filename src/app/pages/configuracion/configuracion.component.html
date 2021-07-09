@@ -1,0 +1,16 @@
+<div class="container">
+  <section id="configuracion" class="border">
+    {{title}}
+    <kendo-dropdownlist
+      [data]="dropDownItems"
+      [filterable]="false"
+      textField="text"
+      valueField="value"
+      [(ngModel)]="selectedItem"
+      (selectionChange)="selectionChange($event)">
+    </kendo-dropdownlist>
+  </section>
+  <section id="tabla" class="border">
+    <app-tables></app-tables>
+  </section>
+</div>
