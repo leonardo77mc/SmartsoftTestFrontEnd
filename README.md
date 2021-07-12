@@ -1,6 +1,6 @@
 # SmartsoftTestFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
+Technical test app for SmartSoft.
 
 ## Development server
 
