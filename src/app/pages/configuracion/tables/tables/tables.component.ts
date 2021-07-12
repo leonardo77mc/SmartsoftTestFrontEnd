@@ -35,7 +35,6 @@ export class TablesComponent implements OnInit, OnDestroy {
     }));
 
     this.subscriptions.push(this.$details.subscribe((items) => {
-      console.log('tabla structure:', items);
       if (items?.length > 0) {
         this.tableStructure = [];
         this.tableStructure = items;
