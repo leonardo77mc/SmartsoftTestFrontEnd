@@ -4,7 +4,15 @@ import {ConfiguracionComponent} from './pages/configuracion/configuracion.compon
 
 const routes: Routes = [
   {
-    path: '', component: ConfiguracionComponent, data: {title: 'Configuración'}
+    path: '',
+    children: [
+      {
+        path: 'configuration',
+        component: ConfiguracionComponent,
+        loadChildren: () => import('./pages/configuracion/configuracion.module')
+          .then(m => m.ConfiguracionModule)
+      }
+    ]
   }
 ];
 

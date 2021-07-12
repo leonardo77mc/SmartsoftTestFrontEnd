@@ -5,15 +5,16 @@
 .container {
   display: flex;
   flex-flow: row;
+  padding: 1em;
 }
 
 #configuracion {
-  height: 200px;
+  height: 700px;
   flex-grow: 1;
 }
 
 #tabla {
-  height: 200px;
+  height: 700px;
   flex-grow: 8;
 }
 
