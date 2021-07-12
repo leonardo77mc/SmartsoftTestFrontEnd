@@ -1,4 +1,6 @@
-
+/**
+ * Action namespace for configuration states.
+ */
 export namespace ConfigurationActions {
 
   export class SelectItem {

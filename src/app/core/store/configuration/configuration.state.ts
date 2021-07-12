@@ -44,6 +44,12 @@ export class ConfigurationState {
     return state.tableStructure;
   }
 
+
+  /**
+   * Action to select item.
+   * @param ctx
+   * @param action
+   */
   @Action(ConfigurationActions.SelectItem)
   seletItem(
     ctx: StateContext<ConfigurationStateModel>,
@@ -54,6 +60,10 @@ export class ConfigurationState {
     });
   }
 
+  /**
+   * Action to get the tables.
+   * @param ctx
+   */
   @Action(ConfigurationActions.Get)
   get(
     ctx: StateContext<ConfigurationStateModel>
@@ -67,6 +77,11 @@ export class ConfigurationState {
         }));
   }
 
+  /**
+   * Action to get the tables in detail
+   * @param ctx
+   * @param action
+   */
   @Action(ConfigurationActions.GetDetail)
   getDetail(
     ctx: StateContext<ConfigurationStateModel>,
@@ -81,6 +96,10 @@ export class ConfigurationState {
         }));
   }
 
+  /**
+   * Action to delete the currently selected item from the store.
+   * @param ctx
+   */
   @Action(ConfigurationActions.Default)
   setDefault(
     ctx: StateContext<ConfigurationStateModel>

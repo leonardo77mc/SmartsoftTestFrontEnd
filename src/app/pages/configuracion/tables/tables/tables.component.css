@@ -13,9 +13,14 @@ small {
 .container {
   display: flex;
   flex-flow: row;
+  padding: 1em;
 }
 
 .tablas {
   border: 1px solid grey;
   border-radius: 11px;
+}
+
+h4 {
+  margin-left: 2.3%;
 }

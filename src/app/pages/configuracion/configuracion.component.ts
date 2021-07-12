@@ -20,6 +20,7 @@ export class ConfiguracionComponent implements OnInit {
   public defaultItem = 'Selecciona una tabla';
   private subscriptions: Subscription[] = [];
 
+  /** @Select to listen to the status of the tables */
  @Select(ConfigurationState.getTables) $dropDownItems: Observable<ITable[]>;
 
   constructor(private readonly _store: Store) {
@@ -28,6 +29,7 @@ export class ConfiguracionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+      /** Action to call the tables */
       this._store.dispatch(new ConfigurationActions.Get());
       this.subscriptions.push(this.$dropDownItems.subscribe((items)=> {
         if(items?.length > 0) {
@@ -43,10 +45,14 @@ export class ConfiguracionComponent implements OnInit {
       }))
   }
 
+  /** Action to select an item */
   public selectionChange(value: any): void {
     this._store.dispatch(new ConfigurationActions.SelectItem(value.value));
   }
 
+  /**
+   * Unsubscribe all subscriptions.
+   */
   ngOnDestroy(): void {
     this.subscriptions.forEach(
       (sub: Subscription) => {sub.unsubscribe(); }

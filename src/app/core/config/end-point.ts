@@ -1,5 +1,8 @@
 import {environment} from '../../../environments/environment';
 
+/**
+ * Configuration genery class to use the required endpoint.
+ */
 export class EndPoints {
 
   static uriApi(url: string): string {
